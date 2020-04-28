@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Volkhov:400italic);
+
+.iti__flag {background-image: image-url("./intl-tel-input-master/build/img/flags,png");}
+    
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.iti__flag {background-image: image-url("./intl-tel-input-master/build/img/flags@2x.png");}
+}
+
+.iti__country {
+	float: left !important;
+  text-align: left !important;
+  background-color: grey !important;
+  width: 450px !important;
+  overflow: none;
+}
+
+
+.iti__country:hover {
+  background-color: grey !important;
+}
+
+.colored-link {
+    color: blue;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.colored-link:hover {
+    color: skyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.close-button {
+  z-index: 999;
+  position: fixed;
+  margin-top: -25px;
+  margin-left: 70%;
+  float: right;
+  cursor: pointer;
+  background-color: gray !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.member-area {
+  margin-top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+#member-area-container {
+  display: none;
+  z-index: 16777271;
+	position: fixed;
+}
+
+@media (max-width: 889px) {
+  #mobile-member-area{
+    display: block;
+  }
+}
