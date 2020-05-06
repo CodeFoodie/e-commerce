@@ -19,6 +19,15 @@
   background-color: grey !important;
 }
 
+.logo-text {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.logo-text span {
+  color: #428bca;
+}
+
 .colored-link {
     color: blue;
     text-decoration: underline;
