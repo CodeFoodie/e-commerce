@@ -33,7 +33,9 @@ const signIn = async () => {
       return false
     }
     if(data.status === 200){
-      document.cookie = `username=${data.data}`;
+      console.log(data.data.first_name);
+      setCookie('userData',data.data, 3);
+      console.log(getCookie('userData'));
       window.location.replace("index.html");
       return false;
     }
