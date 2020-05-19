@@ -14,6 +14,23 @@ const getCookie = (cname) => {
   
     return '';
 };
+
+const toggleVisibility = () => {
+  if(document.getElementById("visibility").innerHTML === "visibility"){
+    document.getElementById("visibility").innerHTML = "visibility_off"
+    document.getElementById("password").type = "password"
+  }else{
+    document.getElementById("visibility").innerHTML = "visibility"
+    document.getElementById("password").type = "text"
+  }
+};
+
+const tokenFromUrl = () => {
+  const url = window.location;
+  const access_token = new URLSearchParams(url.search).get('token');
+  return access_token;
+}
+
   
 const token = getCookie('token');
 const first_name = getCookie('first_name');
