@@ -33,9 +33,8 @@ const signIn = async () => {
       return false
     }
     if(data.status === 200){
-      console.log(data.data.first_name);
-      setCookie('userData',data.data, 3);
-      console.log(getCookie('userData'));
+      setCookie('first_name',data.data.first_name, 1);
+      console.log(getCookie('first_name'));
       window.location.replace("index.html");
       return false;
     }

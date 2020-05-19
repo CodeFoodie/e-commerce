@@ -37,13 +37,12 @@ const getCookie = (cname) => {
     return '';
 };
 */
-const userData = getCookie('userData');
+const first_name = getCookie('first_name');
 
 (() =>{
-  console.log(userData);
-  if(userData != '' && document.getElementById("user")){
-    console.log(userData);
-    document.querySelector("#user").innerHTML = userData.first_name;
+  if(first_name != '' && document.getElementById("user")){
+    console.log(first_name);
+    document.querySelector("#user").innerHTML = first_name;
   }
 })();
 
