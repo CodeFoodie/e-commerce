@@ -38,7 +38,6 @@ const signIn = async () => {
       window.location.replace("index.html");
       return false;
     }
-    console.log(data);
    } catch(e){
        console.log(e);
    }

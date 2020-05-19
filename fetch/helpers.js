@@ -64,7 +64,6 @@ const tokenFromUrl = () => {
 
   
 const token = getCookie('token');
-const first_name = getCookie('first_name');
 
 const IS_DEV_MODE = false;
 // eslint-disable-next-line no-unused-vars
