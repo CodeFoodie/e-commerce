@@ -14,7 +14,6 @@
   overflow: none;
 }
 
-
 .iti__country:hover {
   background-color: grey !important;
 }
@@ -67,4 +66,17 @@
   #mobile-member-area{
     display: block;
   }
+}
+
+#errors{
+  margin-bottom: 15px;
+}
+#errors p{
+  color: red;
+}
+#errors span{
+  color: green;
+  background-color: lightgreen;
+  padding: 5px 10px;
+  margin: 5px 5px;
 }

@@ -12,9 +12,13 @@
 
 /* 2. slick Nav */
 // mobile_menu
+    var sPath=window.location.pathname;
+    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
     var menu = $('ul#navigation');
     if(menu.length){
-      document.getElementById('mobile-member-area').style.display = 'block';
+      if(sPage != 'signin.html' && sPage != 'signup.html'){
+        document.getElementById('mobile-member-area').style.display = 'block';
+      }
       menu.slicknav({
         prependTo: ".mobile_menu",
         closedSymbol: '+',
