@@ -41,8 +41,8 @@ const userData = getCookie('userData');
 
 (() =>{
   console.log(userData);
-  if(userData != ''){
-    document.getElementById("user").innerHTML = userData.first_name;
+  if(userData != '' && document.getElementById("user")){
+    document.querySelector("#user").innerHTML = userData.first_name;
   }
 })();
 
