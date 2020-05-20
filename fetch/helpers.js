@@ -42,7 +42,10 @@ const first_name = getCookie('first_name');
 (() =>{
   if(first_name != '' && document.getElementById("user")){
     console.log(first_name);
-    document.querySelector("#user").innerHTML = first_name;
+    document.querySelector("#user").innerHTML = `hi, ${first_name}`;
+    $('#user').attr('href',"#");
+    document.querySelector("#user-two").innerHTML = `hi, ${first_name}`;
+    $('#user-two').attr('href',"#");
   }
 })();
 
