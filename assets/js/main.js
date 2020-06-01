@@ -24,6 +24,15 @@
         closedSymbol: '+',
         openedSymbol:'-'
       });
+
+      if(JSON.parse(localStorage.getItem('user_data')) && document.getElementById("user")){
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+        const { first_name } = userData;
+        document.querySelector("#user").innerHTML = `hi, ${first_name}`;
+        $('#user').attr('href',"#");
+        document.querySelector("#user-two").innerHTML = `hi, ${first_name}`;
+        $('#user-two').attr('href',"#");
+      }
     };
 
    // var width = $(window).width();

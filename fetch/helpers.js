@@ -1,3 +1,24 @@
+const toggleVisibility = () => {
+  if(document.getElementById("visibility").innerHTML === "visibility"){
+    document.getElementById("visibility").innerHTML = "visibility_off"
+    document.getElementById("password").type = "password"
+  }else{
+    document.getElementById("visibility").innerHTML = "visibility"
+    document.getElementById("password").type = "text"
+  }
+};
+
+function readURL(input) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+          $('#previewImage')
+              .attr('src', e.target.result);
+      };
+      reader.readAsDataURL(input.files[0]);
+      return false;
+}
+
+
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -20,11 +41,13 @@ function getCookie(cname) {
   }
   return "";
 }
-const first_name = getCookie('first_name');
 
+let userHasActiveSession = false;
 (() =>{
-  if(first_name != '' && document.getElementById("user")){
-    console.log(first_name);
+  if(JSON.parse(localStorage.getItem('user_data')) && document.getElementById("user")){
+    const userData = JSON.parse(localStorage.getItem('user_data'));
+    const { first_name } = userData;
+    userHasActiveSession = true;
     document.querySelector("#user").innerHTML = `hi, ${first_name}`;
     $('#user').attr('href',"#");
     document.querySelector("#user-two").innerHTML = `hi, ${first_name}`;
@@ -33,20 +56,10 @@ const first_name = getCookie('first_name');
 })();
 
 const autoAuth = () => {
-  if(first_name != ''){
+  if(userHasActiveSession){
     window.location.replace("index.html");
   }
 }
-
-const toggleVisibility = () => {
-  if(document.getElementById("visibility").innerHTML === "visibility"){
-    document.getElementById("visibility").innerHTML = "visibility_off"
-    document.getElementById("password").type = "password"
-  }else{
-    document.getElementById("visibility").innerHTML = "visibility"
-    document.getElementById("password").type = "text"
-  }
-};
 
 const tokenFromUrl = () => {
   const url = window.location;

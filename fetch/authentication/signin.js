@@ -33,8 +33,13 @@ const signIn = async () => {
       return false
     }
     if(data.status === 200){
-      setCookie('first_name',data.data.first_name, 1);
-      window.location.replace("index.html");
+      setCookie('first_name', data.data.first_name, 1);
+      localStorage.setItem("user_data", JSON.stringify(data.data));
+      if(data.is_admin){
+        window.location.replace("admin.html");
+      }else{
+        window.location.replace("index.html");
+      }
       return false;
     }
    } catch(e){

@@ -96,22 +96,15 @@ function autocomplete(inp, arr) {
   }
   
   /*An array containing all the country names in the world:*/
-  var countries = ['Baby Cosmetics',
-  'Bags',
-  'Booking',
-  'Clothing',
-  'Daily Cosmetics',
-  'Energy Shoes',
-  'Healthcare',
-  'Men',
-  'Music',
-  'NutriV Rich',
-  'Posters',
-  'Promo',
-  'Shoes',
-  'Superbklean Sanitary Range',
-  'Sweaters',
-  'Women'];
+  var states = () => {
+    let theStates = []
+    stateAndLocals.forEach((stateObj) => {
+        theStates.push(stateObj.state.name);
+    })
+    return theStates
+  }
+  
+
   
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-  autocomplete(document.getElementById("myInput"), countries);
+  autocomplete(document.getElementById("myInput"), states);

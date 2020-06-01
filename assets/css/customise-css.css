@@ -19,12 +19,12 @@
 }
 
 .logo-text {
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bolder;
 }
 
 .logo-text span {
-  color: #428bca;
+  color: goldenrod;
 }
 
 .colored-link {
@@ -74,6 +74,10 @@
 #errors p{
   color: red;
 }
+#errors a{
+  color: blue;
+}
+
 #errors span{
   color: green;
   background-color: lightgreen;
@@ -83,4 +87,37 @@
 
 #visibility {
   cursor: pointer;
+}
+
+.gold-border{
+  border-color: gold !important;
+}
+
+.login_part .login_part_text{
+  background-color: goldenrod;
+}
+
+.hero__caption span{
+  color: gold !important;
+  border-color: gold; 
+}
+
+.btn_1, .btn, .btn_3, .checkout_btn_1, #count, .header-btn, #scrollUp{
+  background-color: goldenrod !important;
+  border-color: goldenrod; 
+}
+
+.btn_1:hover, .checkout_btn_1:hover, .ti-arrow-up:hover, #scrollUp:hover{
+  color: white;
+  background-color: gold !important;
+  border-color: goldenrod; 
+}
+
+section, table, tbody, .cart_area, .section_padding, .container, .cart_inner, .table-responsive, .table{
+  overflow: visible !important;
+}
+
+.select-box{
+  overflow: scroll;
+  max-height: 50px;
 }
