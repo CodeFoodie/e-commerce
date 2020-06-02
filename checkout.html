@@ -51,7 +51,7 @@
                           <!-- Logo -->
                           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                               <div class="logo">
-                                <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""></p></a>
+                                <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
                                 <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                               </div>
                           </div>
@@ -295,6 +295,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="./fetch/checkout/viewCheckOut.js"></script>
     <script type="text/javascript" src="http://flw-pms-dev.eu-west-1.elasticbeanstalk.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
     <script>
+       if(!JSON.parse(localStorage.getItem('user_data'))){
+        window.location.replace("cart.html");
+      }
+
         document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById("submit").addEventListener("click", function(e) {
         var PBFKey = "FLWPUBK-aa82cac8ee08f5bb206f937db274081a-X";

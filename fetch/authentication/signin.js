@@ -37,7 +37,10 @@ const signIn = async () => {
       localStorage.setItem("user_data", JSON.stringify(data.data));
       if(data.is_admin){
         window.location.replace("admin.html");
-      }else{
+      }
+      if(JSON.parse(localStorage.getItem('cart'))){
+        window.location.replace("cart.html");
+      } else {
         window.location.replace("index.html");
       }
       return false;
