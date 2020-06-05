@@ -67,7 +67,7 @@ const tokenFromUrl = () => {
   return access_token;
 }
 
-const IS_DEV_MODE = true;
+const IS_DEV_MODE = false;
 // eslint-disable-next-line no-unused-vars
 const host = IS_DEV_MODE
   ? 'http://localhost:5000'
