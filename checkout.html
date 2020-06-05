@@ -61,7 +61,7 @@
                                   <nav>                                                
                                       <ul id="navigation">                                                                                                                                     
                                           <li><a href="index.html">Home</a></li>
-                                          <li><a href="index.html#category">Categories</a></li>
+                                          <li><a href="index.html#category">Shop</a></li>
                                           <li><a href="#">About</a></li>
                                           <li><a href="contact.html">Contact</a></li>
                                           <li id="mobile-member-area" style="display:none;"><a href="signin.html" class="btn header-btn" id="user-two" style="color: white; width: 50%;" >Member area</a></li>
@@ -186,9 +186,19 @@
                     <span id="overall-total"></span>
                   </a>
                 </li>
-              </ul>
+              </ul><br/>
+              <div class="col-md-12 form-group p_star">
+                  <label style="font-size: smaller;" for="image_url">Make payment to: <br/><br/><strong>
+                    Bank: Guaranty Trust Bank<br/>
+                    Account Number: 1234567890<br/>
+                    Account Name: Dbullssquad<br/></strong><br/>
+                    and upload the payment screenshot/scan</label>
+                  <input type="file" accept="image/*" class="form-control" id="image-file" name="image_url" onchange="readURL(this);"/>
+              </div>
               <form>
-                <button class="btn_1 checkout_btn_1" type="button" style="cursor:pointer;" value="Pay Now" id="submit">Pay Now</button>
+                  <div id="errors">
+                  </div>
+                <button class="btn_1 checkout_btn_1" type="button" style="cursor:pointer;" onclick="makeOrder()" id="submit">Make order</button>
               </form>
  
             </div>
@@ -215,7 +225,7 @@
                          </div>
                          -->
                          <div class="logo">
-                          <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt="">DBulls<span>Squad</span></p></a>
+                          <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
                           <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                          </div>
                          <div class="footer-tittle">
@@ -293,6 +303,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="./fetch/helpers.js"></script>
     <script src="./fetch/cart/cart.js"></script>
     <script src="./fetch/checkout/viewCheckOut.js"></script>
+    <script src="./fetch/checkout/makeOrder.js"></script>
+
+    <!--
     <script type="text/javascript" src="http://flw-pms-dev.eu-west-1.elasticbeanstalk.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
     <script>
        if(!JSON.parse(localStorage.getItem('user_data'))){
@@ -333,6 +346,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       });
     });
     </script>
+  -->
 </body>
 
 </html>

@@ -22,13 +22,7 @@ let cart = [];
         cart = initCart;
     }
 })()
-/*
-const addToCart = (id, image_url, description, price) => {
-    cart.push({id, image_url, description, price});
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartIcon();
-}
-*/
+
 const cartTotal = (cart) => {
     let subTotal = 0;
     cart.forEach((item) => {

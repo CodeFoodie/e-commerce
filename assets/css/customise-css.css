@@ -121,3 +121,7 @@ section, table, tbody, .cart_area, .section_padding, .container, .cart_inner, .t
   overflow: scroll;
   max-height: 50px;
 }
+
+button:hover, a:hover{
+  cursor: pointer !important;
+}

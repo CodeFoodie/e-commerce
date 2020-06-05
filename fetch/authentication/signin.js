@@ -35,10 +35,9 @@ const signIn = async () => {
     if(data.status === 200){
       setCookie('first_name', data.data.first_name, 1);
       localStorage.setItem("user_data", JSON.stringify(data.data));
-      if(data.is_admin){
+      if(data.data.is_admin){
         window.location.replace("admin.html");
-      }
-      if(JSON.parse(localStorage.getItem('cart'))){
+      }else if(JSON.parse(localStorage.getItem('cart'))){
         window.location.replace("cart.html");
       } else {
         window.location.replace("index.html");
