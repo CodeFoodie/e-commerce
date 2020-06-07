@@ -67,6 +67,27 @@ const tokenFromUrl = () => {
   return access_token;
 }
 
+const uniqueArray = a => [...new Set(a.map(o => JSON.stringify(o)))].map(s => JSON.parse(s));
+
+const countInArray = (array, base) => {
+  const newArray = array.filter(function (item){
+      return item.id === base
+  })
+  return newArray.length;
+}
+
+const cartTotal = (cart) => {
+  let subTotal = 0;
+  cart.forEach((item) => {
+      subTotal += item.price
+  })
+  const overAllTotal = subTotal + 1000;
+  return {
+      subTotal,
+      overAllTotal
+  };
+}
+
 const IS_DEV_MODE = false;
 // eslint-disable-next-line no-unused-vars
 const host = IS_DEV_MODE

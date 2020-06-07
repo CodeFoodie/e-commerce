@@ -26,7 +26,7 @@
             <link rel="stylesheet" href="assets/css/customise-css.css">
    </head>
 
-   <body onload="viewCheckOut()">
+   <body onload="viewOrder();">
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -51,33 +51,27 @@
                           <!-- Logo -->
                           <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                               <div class="logo">
-                                <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
-                                <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
+                                  <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
+                                  <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                               </div>
                           </div>
                           <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                               <!-- Main-menu -->
                               <div class="main-menu f-right d-none d-lg-block">
                                   <nav>                                                
-                                      <ul id="navigation">                                                                                                                                     
-                                          <li><a href="index.html">Home</a></li>
-                                          <li><a href="index.html#category">Shop</a></li>
-                                          <li><a href="#">About</a></li>
-                                          <li><a href="contact.html">Contact</a></li>
-                                          <li id="mobile-member-area" style="display:none;"><a href="signin.html" class="btn header-btn" id="user-two" style="color: white; width: 50%;" >Member area</a></li>
+                                      <ul id="navigation">
+                                          <li><a href="admin.html" onclick="showAddProductForm()">Add new</a></li>
+                                          <li><a href="admin.html">All products</a></li>
+                                          <li><a href="admin.html">view orders</a></li>
+                                          <li><a href="admin.html" onclick="showChangeAdminPassword()">Change Password</a></li>
+                                          <li id="mobile-member-area" style="display:none;"><a href="signin.html" class="btn header-btn" style="color: white; width: 50%;" >Hi Admin</a></li>
                                       </ul>
                                   </nav>
                               </div>
                           </div>
                           <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                               <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                  <li>
-                                      <div class="shopping-card">
-                                          <span id="count">0</span>
-                                          <a href="cart.html#cart"><i class="fas fa-shopping-cart"></i></a>
-                                      </div>
-                                  </li>
-                                 <li class="d-none d-lg-block" ><a href="signin.html" id="user" class="btn header-btn">Member area</a></li>
+                                 <li class="d-none d-lg-block" ><a href="#" class="btn header-btn">Hi, Admin!</a></li>
                               </ul>
                           </div>
                           <!-- Mobile Menu -->
@@ -100,7 +94,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Check Out <i class="fas fa-credit-card"></i></h2>
+                        <h2>View Order <i class="fas fa-search"></i></h2>
                     </div>
                 </div>
             </div>
@@ -108,7 +102,7 @@
     </div>
   </div>
   <!-- slider Area End-->
-
+  
   <!--================Checkout Area =================-->
   <section class="checkout_area section_padding">
     <div class="container">
@@ -128,12 +122,6 @@
               </div>
               <div class="col-md-6 form-group p_star">
                 <input type="text" placeholder="Your Email" class="form-control" id="email" name="compemailany" disabled/>
-              </div>
-              <div class="col-md-12 form-group p_star">
-                <input type="text" placeholder="State" class="form-control" id="state" name="add1" disabled/>
-              </div>
-              <div class="col-md-12 form-group p_star">
-                <input type="text" placeholder="Local Government Area" class="form-control" id="lga" name="add2" disabled/>
               </div>
               <div class="col-md-12 form-group p_star">
                 <input type="text" placeholder="Street address" class="form-control" id="address" name="city" disabled/>
@@ -178,7 +166,7 @@
                 </li>
                 <li>
                   <a href="#">Shipping
-                    <span>Flat rate: ₦1,000</span>
+                    <span>Flat rate: ₦1, 000.00</span>
                   </a>
                 </li>
                 <li>
@@ -187,21 +175,11 @@
                   </a>
                 </li>
               </ul><br/>
-              <div class="col-md-12 form-group p_star">
-                  <label style="font-size: smaller;" for="image_url">Make payment to: <br/><br/><strong>
-                    Bank: Guaranty Trust Bank<br/>
-                    Account Number: 1234567890<br/>
-                    Account Name: Dbullssquad<br/></strong><br/>
-                    and upload the payment screenshot/scan</label>
-                  <input type="file" accept="image/*" class="form-control" id="image-file" name="image_url" onchange="readURL(this);"/>
-              </div>
-              <form>
-                  <div id="errors">
-                  </div>
-                <button class="btn_1 checkout_btn_1" type="button" style="cursor:pointer;" onclick="makeOrder()" id="submit">Make order</button>
-              </form>
- 
             </div>
+          </div>
+          <div class="col-lg-8">
+            <h3>Uploaded payment screenshot</h3>
+            <span id="receipt-url"></span>
           </div>
         </div>
       </div>
@@ -301,52 +279,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="./assets/js/utils.js"></script>
     <script src="fetch/NigerianStates.js"></script>
     <script src="./fetch/helpers.js"></script>
-    <script src="./fetch/cart/cart.js"></script>
-    <script src="./fetch/checkout/viewCheckOut.js"></script>
-    <script src="./fetch/checkout/makeOrder.js"></script>
-
-    <!--
-    <script type="text/javascript" src="http://flw-pms-dev.eu-west-1.elasticbeanstalk.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-    <script>
-       if(!JSON.parse(localStorage.getItem('user_data'))){
-        window.location.replace("cart.html");
-      }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-        document.getElementById("submit").addEventListener("click", function(e) {
-        var PBFKey = "FLWPUBK-aa82cac8ee08f5bb206f937db274081a-X";
-        getpaidSetup({
-          PBFPubKey: 'FLWSECK-c694ab0df7c6296c09715fbc03dc2171-X',
-          customer_email: "user@example.com",
-          customer_firstname: "Temi",
-          customer_lastname: "Adelewa",
-          custom_description: "Pay Internet",
-          custom_logo: "assets/img/logo/smaller-bull.png",
-          custom_title: "DBullsSquad",
-          amount: 2000,
-          customer_phone: "234099940409",
-          country: "NG",
-          currency: "NGN",
-          txref: "rave-123456",
-          integrity_hash: "6800d2dcbb7a91f5f9556e1b5820096d3d74ed4560343fc89b03a42701da4f30",
-          onclose: function() {},
-          callback: function(response) {
-            var flw_ref = response.tx.flwRef; // collect flwRef returned and pass to a                  server page to complete status check.
-            console.log("This is the response returned after a charge", response);
-            if (
-              response.tx.chargeResponseCode == "00" ||
-              response.tx.chargeResponseCode == "0"
-            ) {
-              // redirect to a success page
-            } else {
-              // redirect to a failure page.
-            }
-          }
-        });
-      });
-    });
-    </script>
-  -->
+    <script src="./fetch/checkout/viewOrder.js"></script>
 </body>
 
 </html>

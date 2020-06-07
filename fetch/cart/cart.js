@@ -3,7 +3,6 @@ const countInArray = (array, value) => {
     return array.reduce((n, x) => n + (x === value), 0);
 };
 */
-const uniqueArray = a => [...new Set(a.map(o => JSON.stringify(o)))].map(s => JSON.parse(s))
 
 const updateCartIcon = () => {
     if(Array.isArray(JSON.parse(localStorage.getItem('cart')))){
@@ -22,25 +21,6 @@ let cart = [];
         cart = initCart;
     }
 })()
-
-const cartTotal = (cart) => {
-    let subTotal = 0;
-    cart.forEach((item) => {
-        subTotal += item.price
-    })
-    const overAllTotal = subTotal + 1000;
-    return {
-        subTotal,
-        overAllTotal
-    };
-}
-
-const countInArray = (array, base) => {
-    const newArray = array.filter(function (item){
-        return item.id === base
-    })
-    return newArray.length;
-}
 
 const modifyCart = (id, image_url, description, price, task) => {
     if(task === 'add'){

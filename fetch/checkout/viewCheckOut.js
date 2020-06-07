@@ -1,3 +1,4 @@
+let total;
 const viewCheckOut = () => {
     /*
     if(!userHasActiveSession){
@@ -22,6 +23,7 @@ const viewCheckOut = () => {
     });
 
     let cartTotaled = cartTotal(cartParsedValue);
+    total = cartTotaled;
     document.querySelector("#sub-total").innerHTML = `₦${cartTotaled.subTotal.toLocaleString()}`;
     document.querySelector("#overall-total").innerHTML = `₦${cartTotaled.overAllTotal.toLocaleString()}`;
     document.querySelector("#cart-review").innerHTML = cartReview;
