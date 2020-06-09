@@ -81,3 +81,40 @@ const showAddProductForm = () => {
     `;
     return false;
 }
+
+const showUpdateAboutUs = () => {
+    document.getElementById("container").innerHTML =
+    `
+    <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_text text-center">
+                        <div class="login_part_text_iner" id="generic-about-us">
+                            <h2>See review here</h2>
+                            <p>Sample generic content here..., sample generic content here...</p>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                            <h3>Update About Us</h3>
+                                <div id="errors">
+                                </div>
+                            <div class="row contact_form" id="form">
+                                <div class="col-md-12 form-group p_star">
+                                    <textarea id="about-us" cols=20 rows=10></textarea>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <button type="submit" class="btn_3" onclick="updateAboutUs()">
+                                        Update content
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `;
+    return false;
+}
