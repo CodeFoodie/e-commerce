@@ -27,6 +27,7 @@ const addProduct = async () => {
    try {
         const response = await fetch(req);
         const data = await response.json();
+        console.log(data);
         if(data.status === 401){
             document.getElementById("errors").innerHTML=`<p>Your login session has expired, click here to <a href="signin.html">login</a> again...</p>`;
             localStorage.removeItem("user_data");
