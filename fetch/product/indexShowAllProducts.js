@@ -20,13 +20,13 @@ const indexShowAllProducts = async () => {
           <div class="col-xl-4 col-lg-4 col-md-6">
               <div class="single-product mb-60 single-product-background">
                   <div class="product-img">
-                      <img src="${image_url}" alt="">
+                      <img src="${image_url}" width="200px" height="250px" alt="">
                       <div class="new-product">
                           <span>New</span>
                       </div>
                   </div>
                   <div class="product-caption">
-                      <h4><a href="#">${description}</a></h4>
+                      <h4>${description}</h4>
                       <div class="price">
                           <ul>
                               <li>₦${price.toLocaleString()}</li></br>
