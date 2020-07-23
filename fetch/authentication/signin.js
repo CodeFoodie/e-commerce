@@ -20,6 +20,7 @@ const signIn = async () => {
    try {
     const response = await fetch(req);
     const data = await response.json();
+    console.log(data);
     if(data.errors){
         let errorString = ''
         for (var key in data.errors) {
