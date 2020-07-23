@@ -23,6 +23,10 @@
   font-weight: bolder;
 }
 
+.logo-text img {
+  float: right !important;
+}
+
 .logo-text span {
   color: goldenrod;
 }

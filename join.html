@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
-        <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">-->
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"> -->
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -51,8 +51,8 @@
                             <!-- Logo -->
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                    <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
-                                    <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
+                                  <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
+                                  <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -61,10 +61,10 @@
                                     <nav>                                                
                                         <ul id="navigation">                                                                                                                                     
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
                                             <li><a href="join.html">Join DBSA</a></li>
+                                            <li><a href="shop.html">Shop</a></li>
                                             <li><a href="contact.html">Contact</a></li>
-                                            <li id="mobile-member-area" style="display:none;"><a href="signin.html" class="btn header-btn" style="color: white; width: 50%;" >Member area</a></li>
+                                            <li id="mobile-member-area" style="display:none;"><a href="signin.html" id="user-two" class="btn header-btn" style="color: white; width: 50%;" >Sign Up</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -73,11 +73,11 @@
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                     <li>
                                         <div class="shopping-card">
-                                                <span id="count">0</span>
+                                            <span id="count">0</span>
                                             <a href="cart.html#cart"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
-                                   <li class="d-none d-lg-block" ><a href="#" class="btn header-btn">Hi there!</a></li>
+                                   <li class="d-none d-lg-block" ><a href="signin.html" id="user" class="btn header-btn">Sign Up</a></li>
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->
@@ -92,36 +92,69 @@
         <!-- Header End -->
     </header>
 
-    <!--================login_part Area =================-->
     <section class="login_part">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="login_part_text text-center">
                         <div class="login_part_text_iner">
-                            <h2>Oh! remembered your password?</h2>
-                            <p>&nbsp; &nbsp;&nbsp; &nbsp; Continue your shopping expirience &nbsp; &nbsp;&nbsp; &nbsp;</p>
-                            <a href="signin.html" class="btn_3">Sign in</a>
+                            <h1 style="color: white;">Three Simple Steps?</h1>
+                            <h2>Sign up</h2> 
+                            <img width="200px" height="150px" src="assets/img/network-marketing/01.jpeg" alt=""><br/><br/>
+                            <div style="color:white !important;"><i style="font-size:xx-large;" class="material-icons" >arrow_downward</i></div>
+                            <h2>Sale and make referrals</h2>
+                            <img width="200px" height="150px" src="assets/img/network-marketing/02.jpeg" alt=""><br/><br/>
+                            <div style="color:white !important;"><i style="font-size:xx-large;" class="material-icons" >arrow_downward</i></div>
+                            <h2>Keep Reaping</h2>
+                            <img width="200px" height="150px" src="assets/img/network-marketing/06.jpeg" alt=""><br/>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="login_part_form">
                         <div class="login_part_form_iner">
-                            <h3>Forgotten your password! <br>
-                                Request for reset</h3>
+                            <h3>Grow your Network and Earn hugely<br><br/>
+                                Sign up for DBSA..</h3>
                                 <div id="errors">
                                 </div>
-                            <div class="row contact_form" >
+                            <div class="row contact_form" id="form">
                                 <div class="col-md-12 form-group p_star">
-                                    <input type="email" class="form-control" id="email" name="email" value=""
-                                        placeholder="Email">
+                                    <input type="number" class="form-control" id="reference_number" name="reference_number"
+                                        placeholder="Reference Number">
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <select width="400px" class="form-control" id="package" required>
+                                        <option selected disabled>Select Package</option>
+                                        <option value="vip">VIP ------ 1,680PV (700k-800k Naira)-Earn 12% plus 1%</option>
+                                        <option value="platinum">Platinum --720PV(300k-400k Naira)-Earn 12%</option>
+                                        <option value="gold">Gold-------240PV(100k-150k Naira)-Earn 10%</option>
+                                        <option value="silver">Silver-----120PV(50k-80k Naira)-Earn 8%</option>
+                                        <option value="q-silver">Q-Silver---60PV(25k-40k Naira)-Earn 8%</option>
+                                        <option value="starter">Starter---10, 050k Naira</option>
+                                        <option value="shopper">No, Just Shopping</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Email" required>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="number" class="form-control" id="mobile_number" name="mobile_number"
+                                        placeholder="Mobile Number" min=11 required>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="first_name" name="first_name"
+                                        placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="last_name" name="last_name"
+                                        placeholder="Last Name" required>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <button class="btn_3" onClick="requestReset();">
-                                        Email me reset link
+                                    <button class="btn_3" onClick="joinDbsa();">
+                                        sign up
                                     </button>
-                                    <a class="lost_pass" href="signup.html">needs new account?</a>
+                                    <a class="lost_pass" href="forgotpassword.html">forget password?</a>
                                 </div>
                             </div>
                         </div>
@@ -130,8 +163,7 @@
             </div>
         </div>
     </section>
-    <!--================login_part end =================-->
-
+    
     <footer>
         <!-- Footer Start-->
         <div class="footer-area footer-padding">
@@ -147,8 +179,8 @@
                              </div>
                              -->
                              <div class="logo">
-                                <p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt="">DBulls<span>Squad</span></p>
-                                <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
+                                     <p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt="">DBulls<span>Squad</span></p>
+                                     <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                              </div>
                              <div class="footer-tittle">
                                  <div class="footer-pera">
@@ -183,46 +215,46 @@
         <!-- Footer End-->
  
     </footer>
-
-<!-- JS here -->
-
-    <!-- All JS Custom Plugins Link Here here -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
-
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-
-    <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    
-    <!-- Scrollup, nice-select, sticky -->
-    <script src="./assets/js/jquery.scrollUp.min.js"></script>
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
-
-    <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="fetch/helpers.js"></script>
-    <script src="./fetch/authentication/forgotpassword.js"></script>
-    <script src="./fetch/cart/cart.js"></script>
-</body>
-    
-</html>
+     <!-- JS here -->
+     
+         <!-- All JS Custom Plugins Link Here here -->
+         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+         <!-- Jquery, Popper, Bootstrap -->
+         <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+         <script src="./assets/js/popper.min.js"></script>
+         <script src="./assets/js/bootstrap.min.js"></script>
+         <!-- Jquery Mobile Menu -->
+         <script src="./assets/js/jquery.slicknav.min.js"></script>
+ 
+         <!-- Jquery Slick , Owl-Carousel Plugins -->
+         <script src="./assets/js/owl.carousel.min.js"></script>
+         <script src="./assets/js/slick.min.js"></script>
+ 
+         <!-- One Page, Animated-HeadLin -->
+         <script src="./assets/js/wow.min.js"></script>
+         <script src="./assets/js/animated.headline.js"></script>
+         <script src="./assets/js/jquery.magnific-popup.js"></script>
+ 
+         <!-- Scrollup, nice-select, sticky -->
+         <script src="./assets/js/jquery.scrollUp.min.js"></script>
+         <script src="./assets/js/jquery.nice-select.min.js"></script>
+         <script src="./assets/js/jquery.sticky.js"></script>
+         
+         <!-- contact js -->
+         <script src="./assets/js/contact.js"></script>
+         <script src="./assets/js/jquery.form.js"></script>
+         <script src="./assets/js/jquery.validate.min.js"></script>
+         <script src="./assets/js/mail-script.js"></script>
+         <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+         
+         <!-- Jquery Plugins, main Jquery -->	
+         <script src="./assets/js/plugins.js"></script>
+         <script src="./assets/js/main.js"></script>
+         <script src="./assets/js/htmlVariables.js"></script>
+         <script src="./assets/js/utils.js"></script>
+         <script src="./fetch/cart/cart.js"></script>
+         <script src="./fetch/helpers.js"></script>
+         <script src="./fetch/authentication/joinDbsa.js"></script>
+     </body>
+ </html>

@@ -6,19 +6,18 @@ const makeOrder = async () => {
         return false;
     }
 
-    const cart = JSON.parse(localStorage.getItem('cart'));
     const userData = JSON.parse(localStorage.getItem('user_data'));
     delete userData.token;
 
     const shipping_address = `${userData.state}, ${userData.local_government_area}, ${userData.address}`
     
     let fd = new FormData();
+
     fd.append('image_file', image_file);
-    fd.append('user_id', userData.id);
-    fd.append('user_email', userData.email);
-    fd.append('items', JSON.stringify(cart));
+    fd.append('items', localStorage.getItem('cart'));
     fd.append('subtotal', total.subTotal);
     fd.append('total', total.overAllTotal);
+    fd.append('user_data', localStorage.getItem('user_data'));
     fd.append('shipping_address', JSON.stringify(shipping_address));
 
     const uri = `${host}/api/v1/cart/add`;

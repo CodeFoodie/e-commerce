@@ -24,6 +24,125 @@
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
             <link rel="stylesheet" href="assets/css/customise-css.css">
+            <style>
+                body {
+                    font-family: Arial;
+                    margin: 0;
+                }
+                
+                * {
+                    box-sizing: border-box;
+                }
+                
+                img {
+                    vertical-align: middle;
+                }
+                
+                /* Position the image container (needed to position the left and right arrows) */
+               
+                .wider {
+                    width: 100% !important;
+                    position: relative;
+                }
+                
+                /* Hide the images by default */
+                .mySlides {
+                    width: 100%;
+                    display: none;
+                    text-align: center; 
+                    background-color: goldenrod;
+                }
+                
+                .mySlides img {
+                    width: 60%;
+                }
+                
+                /* Add a pointer when hovering over the thumbnail images */
+                .cursor {
+                    cursor: pointer;
+                }
+                
+                /* Next & previous buttons */
+                .prev,
+                .next {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 40%;
+                    width: auto;
+                    padding: 16px;
+                    margin-top: -50px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 20px;
+                    border-radius: 0 3px 3px 0;
+                    user-select: none;
+                    -webkit-user-select: none;
+                }
+                
+                /* Position the "next button" to the right */
+                .next {
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
+                }
+                
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover,
+                .next:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+                
+                /* Number text (1/3 etc) */
+                .numbertext {
+                    color: #f2f2f2;
+                    font-size: 12px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    top: 0;
+                }
+                
+                /* Container for image text */
+                .caption-container {
+                    text-align: center;
+                    background-color: #222;
+                    padding: 2px 16px;
+                    color: white;
+                }
+                
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                
+                /* Six columns side by side */
+                .column {
+                    float: left;
+                    width: 16.66%;
+                }
+                
+                .column img {
+                    height: 15vh !important;
+                }
+                
+                /* Add a transparency effect for thumnbail images */
+                .demo {
+                    opacity: 0.6;
+                }
+                
+                .active,
+                .demo:hover {
+                    opacity: 1;
+                }
+                
+                @media (max-width: 500px) {
+                    .mySlides img {
+                        width: 100%;
+                    }
+                    .column img {
+                    height: 11vh !important;
+                }
+                }
+            </style>
    </head>
 
    <body onload="getAboutUs();">
@@ -51,7 +170,7 @@
                             <!-- Logo -->
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                  <a href="index.html"><p class="logo-text"><img src="assets/img/logo/gold-smaller-bull.png" alt=""><br/>DBulls<span>Squad</span></p></a>
+                                  <a href="index.html"><p class="logo-text" ><img src="assets/img/logo/gold-smaller-bull.png" alt="" style="float: right !important;"><br/>DBulls<span>Squad</span></p></a>
                                   <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                                 </div>
                             </div>
@@ -61,10 +180,10 @@
                                     <nav>                                                
                                         <ul id="navigation">                                                                                                                                     
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="index.html#category">Shop</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="join.html">Join DBSA</a></li>
+                                            <li><a href=""></a></li>
                                             <li><a href="contact.html">Contact</a></li>
-                                            <li id="mobile-member-area" style="display:none;"><a href="signin.html" id="user-two" class="btn header-btn" style="color: white; width: 50%;" >Member area</a></li>
+                                            <li id="mobile-member-area" style="display:none;"><a href="join.html" id="user-two" class="btn header-btn" style="color: white; width: 50%;" >Register</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -77,7 +196,7 @@
                                             <a href="cart.html#cart"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
-                                   <li class="d-none d-lg-block" ><a href="signin.html" id="user" class="btn header-btn">Member area</a></li>
+                                   <li class="d-none d-lg-block" ><a href="join.html" id="user" class="btn header-btn">Register</a></li>
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->
@@ -91,22 +210,75 @@
        </div>
         <!-- Header End -->
     </header>
-
+    <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
+         
   <!-- slider Area Start-->
-  <div class="slider-area ">
-    <!-- Mobile Menu -->
-    <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap text-center">
-                        <h2>About Us <i style="font-size:xx-large;" class="material-icons">people</i></h2>
-                    </div>
+        <div class="container wider">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img height="300vh" src="assets/img/winners/1.png">
                 </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img height="300vh" src="assets/img/winners/2.jpeg">
+              </div>
+                
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img height="300vh" src="assets/img/winners/3.jpeg">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img height="300vh" src="assets/img/winners/4.jpeg">
+              </div>
+                
+              <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img height="300vh" src="assets/img/winners/5.jpeg">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img height="300vh" src="assets/img/winners/6.jpeg">
+            </div>
+                
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+            <!--
+<div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+            -->
+              
+            
+              <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="assets/img/winners/1.png" style="width:100%" onclick="currentSlide(1)" alt="Join LongRich">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/img/winners/2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="One Star Director">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/img/winners/3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="$800 Shopping Basket">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="assets/img/winners/4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="10 Million Naira Car Qualifier">
+                </div>    
+                <div class="column">
+                  <img class="demo cursor" src="assets/img/winners/5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="China Trip Qualifier">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="assets/img/winners/6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="10 Million Naira Car Qualifier">
+                </div>
+              </div>
             </div>
         </div>
-    </div>
-  </div>
+    </div>  
   <!-- slider Area End-->
     
     <!-- product list part start-->
@@ -134,74 +306,12 @@
             </div>
         </div>
     </section>
-    <!-- product list part end-->
-
-    <!-- feature part here -->
-    <!--
-    <section class="feature_part section_padding">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-6">
-                    <div class="feature_part_tittle">
-                        <h3>Credibly innovate granular
-                        internal or organic sources
-                        whereas standards.</h3>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="feature_part_content">
-                        <p>Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources. Credibly innovate granular internal or “organic” sources whereas high standards in web-readiness.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="assets/img/icon/feature_icon_1.svg" alt="#">
-                        <h4>Credit Card Support</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="assets/img/icon/feature_icon_2.svg" alt="#">
-                        <h4>Online Order</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="assets/img/icon/feature_icon_3.svg" alt="#">
-                        <h4>Free Delivery</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_feature_part">
-                        <img src="assets/img/icon/feature_icon_4.svg" alt="#">
-                        <h4>Product with Gift</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-     feature part end -->
-    
-    <!-- client review part here -->
+   
     <section class="client_review">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="client_review_slider owl-carousel">
-                        <!--
-                        <div class="single_client_review">
-                            <div class="client_img">
-                                <img src="assets/img/client.png" alt="#">
-                            </div>
-                            <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                            <h5>- Micky Mouse</h5>
-                        </div>
-                        -->
-                        <div class="single_client_review">
-                                <img src="assets/img/about/9.jpeg" width="40px" height="400px"/>
-                        </div>
                         <div class="single_client_review">
                                 <img src="assets/img/about/2.jpeg" width="40px" height="400px"/>
                         </div>
@@ -226,6 +336,10 @@
                         <div class="single_client_review">
                                 <img src="assets/img/about/1.jpeg" width="40px" height="400px"/>
                         </div>
+                        <div class="single_client_review">
+                                <img src="assets/img/about/9.jpeg" width="40px" height="400px"/>
+                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -239,8 +353,31 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="subscribe_part_content">
-                        <h2>Learn more...</h2>
-                        <p id="generic-about-us">Generic content, generic content .</p>
+                        <h2>LONGRICH DBULLSSQUAD</h2>
+                        <p>The global team of DBULLSSQUAD of longrich Bio Science.                                   The world has changed, the old has given a way for the new one. Welcome to a new economy, where by at the comfort of your home you can transact business all over the world with our platform and earn in foreign currencies. The truth is everyone wants to live the good life but very few end up having the kind of life they desire. It is not because they are not trying hard enough but the vehicle and system, they are using to get to their goal is not giving them the desired result.
+                            This therefore calls for critical thinking and massive action for a better way.
+                            Entrepreneurship is not just the way out but a good system in entrepreneurship.              There is no more security in a job even a high paying one. Relying on one source of income is a dangerous game. The wealthiest people in the world have so many income sources. Financial freedom is only possible when there is lots of residual income flowing in.
+                            DBULLSSQUAD has discovered a way to do this. We have a system to do this, It is so simple everyone can do it.
+                            We can show you how you can live healthy and wealthy.
+                            You can be your own boss, you can work from home, you can be a business owner with Longrich on part time. Our system helps you do this without jeopardizing what you are currently doing. You can live your dreams.
+                            With Longrich through our DBULLSSQUAD platform you are sure to achieve your dreams.
+                            <br/><br/>
+                            DBULLSSQUAD LEADERS<br/>
+                            Mr. & Mrs. Bassey Okon<br/>
+                            Mr. Eric SD                          
+                        </p><br/><br/>
+                        <h2>About Longrich</h2>
+                        <p>Longrich Bio-Science Co. Ltd, (Longrich), which is located in the Longrich Bio-Industrial Park, is one of the leading companies that dominates in the production of Health Care, Cosmetic/Skin Care, Household Cleaning, Furniture, Real Estate business and many more products.
+                            Jiangsu Longliqi Bio-Science Co. Ltd (Longrich) has one of the largest and most advanced centres for research and development of cosmetic and healthcare products in Asia (Southern China). The company has more than 12 000 employees, more than 35% of which are Doctorate students, field experts, and highly trained professionals. For the past 31 years the company has seen steady growth in both expansion and market share.
+                            Jiangsu LONGLIQI Bio-Science Co., Ltd (Longrich) is located in the LONGLIQI Bio-Industrial Park, which covers an area of more than 133 hectares (about 500 acres). It produces more than 1000 products in eight categories, including household, cosmetics, health care products, furniture, real estate and logistics. It is one of the largest and most advanced center for research, development, manufacture and sale of cosmetics and health care products in China. it has a total of 10,000 employees. In the past 26 years, the company has developed a healthy and steady manner and has become a leader of the national cosmetic industry...</p>
+                        </p>      
+                    </div>
+                </div>
+            </div>
+            <div class="row"><br/><br/>
+                <div class="col-lg-12">
+                    <div class="section-tittle text-center mb-85">
+                        <h2><a href="join.html" class="button button-contactForm boxed-btn">Join Us Now...</a></h2>
                     </div>
                 </div>
             </div>
@@ -341,5 +478,35 @@
          <script src="./fetch/cart/cart.js"></script>
          <script src="./fetch/helpers.js"></script>
          <script src="./fetch/admin/getAboutUs.js"></script>
+         <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
      </body>
  </html>

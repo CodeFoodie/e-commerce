@@ -36,6 +36,9 @@ const viewOrder = async () => {
     document.querySelector("#overall-total").innerHTML = `₦${cartTotaled.overAllTotal.toLocaleString()}`;
     document.querySelector("#cart-review").innerHTML = cartReview;
 
+    document.getElementById('reference_number').value = data.data.user.reference_number;
+    document.getElementById('package').value = data.data.user.pack;
+
     document.getElementById('first_name').value = data.data.user.first_name;
     document.getElementById('last_name').value = data.data.user.last_name;
     document.getElementById('mobile_number').value = data.data.user.mobile_number;

@@ -51,7 +51,7 @@ const viewCart = () => {
         <div id="errors">
             <p>Your cart is empty, back to shopping ...</p>
         </div>
-        <p onclick="window.location.replace('index.html')" style="cursor:pointer;">Click to go back to shopping...</p>
+        <p onclick="window.location.replace('shop.html')" style="cursor:pointer;">Click to go back to shopping...</p>
         `;
         return false;
     }
@@ -108,7 +108,7 @@ const viewCart = () => {
 
 const proceedToCheckOut = () => {
     if(userHasActiveSession == false){
-        document.getElementById("errors").innerHTML = '<p>*Please <a href="signin.html">sign in/sign up</a> to proceed to checkout</p>';
+        document.getElementById("errors").innerHTML = '<p>*Please <a href="join.html">sign up</a> to proceed to checkout</p>';
         return false;
     }
     if(document.getElementById('state').value == false){

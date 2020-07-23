@@ -1,11 +1,5 @@
 let total;
 const viewCheckOut = () => {
-    /*
-    if(!userHasActiveSession){
-        window.location.replace("cart.html");
-        return false;
-    };
-    */
     const cartParsedValue = JSON.parse(localStorage.getItem('cart'));
     let cartReview = '';
     uniqueArray(cartParsedValue).reverse().forEach((item) => {
@@ -19,7 +13,7 @@ const viewCheckOut = () => {
                 <span class="last">₦${(price * count).toLocaleString()}</span>
             </a>
         </li>
-        `; 
+        `;
     });
 
     let cartTotaled = cartTotal(cartParsedValue);
@@ -36,4 +30,5 @@ const viewCheckOut = () => {
     document.getElementById('state').value = userData.state;
     document.getElementById('lga').value = userData.local_government_area;
     document.getElementById('address').value = userData.address;
+    document.getElementById('package').value = `${titleCase(userData.package)} Package`;
 }
