@@ -24,7 +24,7 @@
 }
 
 .logo-text img {
-  float: right !important;
+  margin-left: 20px;
 }
 
 .logo-text span {
@@ -64,12 +64,6 @@
   display: none;
   z-index: 16777271;
 	position: fixed;
-}
-
-@media (max-width: 889px) {
-  #mobile-member-area{
-    display: block;
-  }
 }
 
 #errors{
@@ -128,4 +122,14 @@ section, table, tbody, .cart_area, .section_padding, .container, .cart_inner, .t
 
 button:hover, a:hover{
   cursor: pointer !important;
+}
+
+.boxed-btn:hover {
+  background-color: yellow;
+}
+
+@media (max-width: 889px) {
+  #mobile-member-area{
+    display: block;
+  }
 }

@@ -33,7 +33,11 @@
                 * {
                     box-sizing: border-box;
                 }
-                
+                .slider-area {
+                    border-top: 5px solid goldenrod;
+                    border-bottom: 5px solid goldenrod;
+                }
+
                 img {
                     vertical-align: middle;
                 }
@@ -136,16 +140,17 @@
                 
                 @media (max-width: 500px) {
                     .mySlides img {
+                        height: 45vh;
                         width: 100%;
                     }
                     .column img {
                     height: 11vh !important;
-                }
+                    }
                 }
             </style>
    </head>
 
-   <body onload="getAboutUs();">
+   <body>
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -170,7 +175,7 @@
                             <!-- Logo -->
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                  <a href="index.html"><p class="logo-text" ><img src="assets/img/logo/gold-smaller-bull.png" alt="" style="float: right !important;"><br/>DBulls<span>Squad</span></p></a>
+                                  <a href="index.html"><p class="logo-text" ><img src="assets/img/logo/gold-smaller-bull.png" alt="" ><br/>DBulls<span>Squad</span></p></a>
                                   <!-- <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a> -->
                                 </div>
                             </div>
@@ -215,35 +220,35 @@
             <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/h1_hero.jpg">
          
   <!-- slider Area Start-->
-        <div class="container wider">
+        <div class="container wider" >
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img height="300vh" src="assets/img/winners/1.png">
+                    <img height="350vh" src="assets/img/winners/1.png">
                 </div>
             
               <div class="mySlides">
                 <div class="numbertext">2 / 6</div>
-                <img height="300vh" src="assets/img/winners/2.jpeg">
+                <img height="350vh" src="assets/img/winners/2.jpeg">
               </div>
                 
               <div class="mySlides">
                 <div class="numbertext">3 / 6</div>
-                <img height="300vh" src="assets/img/winners/3.jpeg">
+                <img height="350vh" src="assets/img/winners/3.jpeg">
               </div>
             
               <div class="mySlides">
                 <div class="numbertext">4 / 6</div>
-                <img height="300vh" src="assets/img/winners/4.jpeg">
+                <img height="350vh" src="assets/img/winners/4.jpeg">
               </div>
                 
               <div class="mySlides">
                 <div class="numbertext">5 / 6</div>
-                <img height="300vh" src="assets/img/winners/5.jpeg">
+                <img height="350vh" src="assets/img/winners/5.jpeg">
               </div>
             
               <div class="mySlides">
                 <div class="numbertext">6 / 6</div>
-                <img height="300vh" src="assets/img/winners/6.jpeg">
+                <img height="350vh" src="assets/img/winners/6.jpeg">
             </div>
                 
               <a class="prev" onclick="plusSlides(-1)">❮</a>
