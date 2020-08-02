@@ -100,5 +100,6 @@ const IS_DEV_MODE = false;
 // eslint-disable-next-line no-unused-vars
 const host = IS_DEV_MODE
   ? 'http://localhost:5000'
-  : 'https://cors-torsami77.herokuapp.com/https://backend-dbullsquad.herokuapp.com/';
+  : 'https://cors-anywhere.herokuapp.com/https://backend-dbullsquad.herokuapp.com/';
+//  : 'https://cors-torsami77.herokuapp.com/https://backend-dbullsquad.herokuapp.com/';
 //  : 'https://cors-anywhere.herokuapp.com/https://dbullssquad.herokuapp.com';
