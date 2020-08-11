@@ -1,0 +1,158 @@
+*{box-sizing: border-box; -webkit-box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font: 16px/1.3 sans-serif; }
+
+/*
+PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
+http://stackoverflow.com/a/34696029/383904
+*/
+
+.CSSgal-s {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20vh;
+}
+
+/* slider-s */
+
+.CSSgal-s .slider-s {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal-s .slider-s > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal-s .prevNext-s {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+}
+
+.CSSgal-s .prevNext-s > div+div {
+	visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal-s .prevNext-s a {
+	background: #fff;
+	position: absolute;
+	width:       60px;
+	height:      60px;
+	line-height: 60px; /* If you want to place numbers */
+	text-align: center;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+	left: 0;
+}
+.CSSgal-s .prevNext-s a:hover {
+	opacity: 1;
+}
+.CSSgal-s .prevNext-s a+a {
+	left: auto;
+	right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal-s .bullets-s {
+	position: absolute;
+	z-index: 2;
+	top: 40vw;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+.CSSgal-s .bullets-s > a {
+	display: inline-block;
+	width:       30px;
+	height:      30px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(255, 255, 255, 1);
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+}
+.CSSgal-s .bullets-s > a+a {
+	background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal-s .bullets-s > a:hover {
+	background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal-s >s:target ~ .bullets-s >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets-s >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets-s >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets-s >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets-s >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+#s5:target ~ .bullets-s >*:nth-child(5) {background: rgba(255, 255, 255,   1);}
+#s6:target ~ .bullets-s >*:nth-child(6) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal-s >s:target ~ .prevNext-s >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext-s >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext-s >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext-s >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext-s >*:nth-child(4) {visibility: visible;}
+#s5:target ~ .prevNext-s >*:nth-child(5) {visibility: visible;}
+#s6:target ~ .prevNext-s >*:nth-child(6) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* slider-s ANIMATION POSITIONS */
+
+#s1:target ~ .slider-s {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider-s {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider-s {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider-s {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+#s5:target ~ .slider-s {transform: translateX(-400%); -webkit-transform: translateX(-400%);}
+#s6:target ~ .slider-s {transform: translateX(-500%); -webkit-transform: translateX(-500%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal-s CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal-s{
+	color: #fff;	
+	text-align: center;
+}
+.CSSgal-s .slider-s h2 {
+	margin-top: 40vh;
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+}
+.CSSgal-s a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+}
