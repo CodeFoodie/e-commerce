@@ -20,7 +20,7 @@ const indexShowAllProducts = async () => {
           <div class="col-xl-4 col-lg-4 col-md-6">
               <div class="single-product mb-60 single-product-background">
                   <div class="product-img">
-                      <img src="${image_url}" width="200px" height="250px" alt="">
+                      <img src="${image_url}"  height="300px" alt="">
                       <div class="new-product">
                           <span>New</span>
                       </div>

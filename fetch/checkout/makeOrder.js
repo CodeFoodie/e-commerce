@@ -7,6 +7,9 @@ const makeOrder = async () => {
     }
 
     const userData = JSON.parse(localStorage.getItem('user_data'));
+    if(!userData){
+        window.location.replace("index.html");
+    }
     delete userData.token;
 
     const shipping_address = `${userData.state}, ${userData.local_government_area}, ${userData.address}`
@@ -35,7 +38,9 @@ console.log(data);
     if(data.status === 201){
         localStorage.removeItem('cart');
 	    document.getElementById("errors").innerHTML = '<span>Your order has been placed successfully, you will be contacted by our delivery team shortly</span>';
-	    return false;
+        localStorage.removeItem('user_data');
+        localStorage.clear();
+        return false;
     } else {
         document.getElementById("errors").innerHTML = '<p>There was a problem placing your order, please try again</p>';
         return false;
